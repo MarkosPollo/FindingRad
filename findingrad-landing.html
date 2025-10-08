@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding Rad | Build Your Dream</title>
+    <meta name="description" content="Join Mark on the journey of building products, businesses, and a life of freedom. Real builders, real process, real stories.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --yellow: #FFD23F;
+            --charcoal: #1a1a1a;
+            --grey: #F5F5F5;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--charcoal);
+            background: var(--white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Typography */
+        h1, .h1 {
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 1rem 5%;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--charcoal);
+            text-decoration: none;
+        }
+
+        .nav-cta {
+            background: var(--yellow);
+            color: var(--charcoal);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--yellow);
+        }
+
+        .nav-cta:hover {
+            background: var(--charcoal);
+            color: var(--yellow);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 210, 63, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 5% 4rem;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            color: #666;
+            margin-bottom: 3rem;
+            font-weight: 400;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--yellow);
+            color: var(--charcoal);
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 2px solid var(--yellow);
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: var(--charcoal);
+            color: var(--yellow);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 210, 63, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--charcoal);
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 2px solid var(--charcoal);
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-secondary::before {
+            content: '▶';
+            position: absolute;
+            left: -30px;
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+
+        .btn-secondary:hover {
+            background: var(--charcoal);
+            color: var(--white);
+            transform: translateY(-3px);
+            padding-left: 3.5rem;
+        }
+
+        .btn-secondary:hover::before {
+            left: 1.5rem;
+            opacity: 1;
+        }
+
+        /* Blueprint Animation */
+        .blueprint {
+            position: absolute;
+            top: 50%;
+            right: -10%;
+            transform: translateY(-50%);
+            opacity: 0.03;
+            width: 600px;
+            height: 600px;
+        }
+
+        .blueprint-path {
+            stroke: var(--charcoal);
+            stroke-width: 2;
+            fill: none;
+            stroke-dasharray: 2000;
+            stroke-dashoffset: 2000;
+            animation: draw 3s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        /* Content Sections */
+        section {
+            padding: 6rem 5%;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-grey {
+            background: var(--grey);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .about-image {
+            background: var(--charcoal);
+            aspect-ratio: 1;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image::before {
+            content: "👨‍💻";
+            position: absolute;
+            font-size: 8rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.3;
+        }
+
+        /* Content Pillars */
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .pillar-card {
+            background: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--yellow);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .pillar-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .pillar-card:nth-child(2) .pillar-icon {
+            animation-delay: 0.5s;
+        }
+
+        .pillar-card:nth-child(3) .pillar-icon {
+            animation-delay: 1s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .pillar-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .pillar-card p {
+            color: #666;
+            font-size: 1.05rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 8rem 5%;
+            background: var(--charcoal);
+            color: var(--white);
+        }
+
+        .cta-section h2 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        /* Email Form */
+        .email-form {
+            max-width: 500px;
+            margin: 0 auto 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .email-form input {
+            flex: 1;
+            min-width: 250px;
+            padding: 1.2rem 1.5rem;
+            border-radius: 50px;
+            border: none;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .email-form button {
+            background: var(--yellow);
+            color: var(--charcoal);
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .email-form button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 210, 63, 0.4);
+        }
+
+        .social-proof {
+            font-size: 0.95rem;
+            opacity: 0.7;
+            margin-top: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 5%;
+            background: var(--grey);
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--charcoal);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--yellow);
+        }
+
+        .footer-text {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 6rem 5% 3rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .pillars {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn-primary, .btn-secondary {
+                text-align: center;
+            }
+
+            .email-form {
+                flex-direction: column;
+            }
+
+            .email-form input {
+                min-width: 100%;
+            }
+
+            .blueprint {
+                display: none;
+            }
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: var(--yellow);
+            color: var(--charcoal);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+
+        .success-message.show {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">Finding Rad</a>
+        <a href="#join" class="nav-cta">Join the Expedition</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Ideas are easy.<br>Building is the adventure.</h1>
+            <p class="hero-subtitle">I'm Mark — a dad, designer, and certified chaos wrangler turning napkin sketches into real things. No fluff. No "crush it" culture. Just the good, hard, funny stuff that happens in between and maybe, if we're lucky, we'll find a little radness along the way.</p>
+            <div class="hero-ctas">
+                <a href="#join" class="btn-primary">Join the Journey</a>
+                <a href="https://youtube.com/@FindingRad" target="_blank" class="btn-secondary">Watch on YouTube</a>
+            </div>
+        </div>
+        
+        <!-- Blueprint SVG Animation -->
+        <svg class="blueprint" viewBox="0 0 400 400">
+            <path class="blueprint-path" d="M50,200 Q50,50 200,50 Q350,50 350,200 Q350,350 200,350 Q50,350 50,200 M100,200 L300,200 M200,100 L200,300 M150,150 L250,150 L250,250 L150,250 Z"/>
+        </svg>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-grey">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>I'm not a guru with a whiteboard.</h3>
+                    <p>I'm the guy covered in sawdust and half-baked ideas actually trying to build the damn thing.</p>
+                    <p>This isn't a "how-to" channel — it's a "let's-see-if-this-works" adventure of turning napkin sketches into real gear through the glorious mess of trial, error, and caffeine.</p>
+                    <p>I run <strong>Hibear</strong>, designing gear for people who drink their coffee at sunrise and their cocktails by campfire.</p>
+                    <p>I prototype, test, and tweak until chaos turns into something genuinely useful.</p>
+                    <p><strong>The mission?</strong> Engineer excitement. Build your own adventure. Maybe even find a little radness along the way. ⚡</p>
+                </div>
+                <div class="about-image"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Pillars -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>What You'll Find Here</h2>
+                <p>Real builders. Real process. Real stories.</p>
+            </div>
+            <div class="pillars">
+                <div class="pillar-card">
+                    <div class="pillar-icon">🔨</div>
+                    <h3>The Builder Series</h3>
+                    <p>Products from napkin sketch to launch. Watch me build and ship real products for Hibear—including the All-Day Adventure Flask and the upcoming Tumbler.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">🎙️</div>
+                    <h3>The Interview Series</h3>
+                    <p>Deep conversations with entrepreneurs, creators, and adventurers who are building extraordinary things. No fluff. Just real stories.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon">⚙️</div>
+                    <h3>The Process</h3>
+                    <p>The struggles, failures, and wins on the path to building your dream. It's not about perfection—it's about progress.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="join">
+        <div class="container">
+            <h2>Join the Expedition</h2>
+            <p>New episodes weekly. Real stories. Real builders. Zero BS.</p>
+            <form class="email-form" id="emailForm">
+                <input type="email" placeholder="Your email address" required id="emailInput">
+                <button type="submit">Count Me In</button>
+            </form>
+            <div class="success-message" id="successMessage">
+                🎉 You're in! Check your email to confirm.
+            </div>
+            <p class="social-proof">Join hundreds of builders on the journey</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://youtube.com/@FindingRad" target="_blank">YouTube</a>
+                <a href="https://hibear.co" target="_blank">Hibear Outdoor Gear</a>
+                <a href="mailto:mark@hibear.co">Contact</a>
+            </div>
+            <p class="footer-text">&copy; 2025 Finding Rad. Built with purpose. Engineered with care.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Nav scroll effect
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Email form handling
+        const emailForm = document.getElementById('emailForm');
+        const successMessage = document.getElementById('successMessage');
+        
+        emailForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('emailInput').value;
+            
+            // Here you would integrate with your email service (ConvertKit, Mailchimp, etc.)
+            // For now, we'll just show the success message
+            
+            successMessage.classList.add('show');
+            emailForm.reset();
+            
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 5000);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
