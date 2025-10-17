@@ -356,6 +356,145 @@
             font-size: 1.05rem;
         }
 
+        /* Video Carousel Section */
+        .video-carousel {
+            background: var(--grey);
+        }
+
+        .carousel-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            position: relative;
+        }
+
+        .video-container {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-card {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .video-card.active {
+            display: block;
+            opacity: 1;
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .video-embed {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            background: #000;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-details {
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .video-details h3 {
+            font-family: 'Fraunces', serif;
+            color: var(--charcoal);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 0 1rem 0;
+        }
+
+        .video-details p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .carousel-btn {
+            background: var(--white);
+            border: 2px solid #e0e0e0;
+            color: var(--charcoal);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            font-weight: 300;
+        }
+
+        .carousel-btn:hover {
+            background: var(--pink);
+            border-color: var(--pink);
+            color: var(--white);
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(232,62,140,0.3);
+        }
+
+        .carousel-btn:active {
+            transform: scale(0.95);
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 2.5rem;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #d0d0d0;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            background: var(--pink);
+            transform: scale(1.3);
+        }
+
+        .carousel-dot:hover {
+            background: var(--pink);
+            opacity: 0.7;
+        }
+
         /* CTA Section */
         .cta-section {
             text-align: center;
@@ -448,6 +587,32 @@
             .blueprint {
                 display: none;
             }
+
+            .carousel-wrapper {
+                gap: 1rem;
+            }
+
+            .carousel-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+
+            .video-details h3 {
+                font-size: 1.5rem;
+            }
+
+            .video-details p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
@@ -481,8 +646,8 @@
             <div class="about-content">
                 <div class="about-text">
                    <h3>Turning good ideas into great adventures.</h3>
-                    <p>I’m Mark — builder, designer, and unapologetic optimist with a workbench full of ideas and a head full of coffee.</p>
-                    <p>This isn’t a “how-to” channel — it’s a front-row seat to the process of bringing wild concepts to life through equal parts grit, curiosity, and caffeine.</p>
+                    <p>I'm Mark — builder, designer, and unapologetic optimist with a workbench full of ideas and a head full of coffee.</p>
+                    <p>This isn't a "how-to" channel — it's a front-row seat to the process of bringing wild concepts to life through equal parts grit, curiosity, and caffeine.</p>
                     <p>I run <strong>Hibear</strong>, where we design gear for people who drink their coffee at sunrise and their cocktails by campfire — because adventure should fit into everyday life.</p>
                     <p>From sketch to prototype to the final pour, I build, test, and refine until something genuinely useful — and a little unexpected — comes to life.</p>
                     <p><strong>The mission?</strong> Engineer excitement. Build your own adventure. Maybe even find a little radness along the way. ⚡</p>
@@ -518,6 +683,70 @@
                     <p>The struggles, failures, and wins on the path to building your dream. It's not about perfection—it's about progress.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Video Carousel Section -->
+    <section class="video-carousel section-grey">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Episodes</h2>
+                <p>New adventures every week</p>
+            </div>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn carousel-prev" aria-label="Previous video">‹</button>
+                <div class="video-container">
+                    <div class="video-card active">
+                        <div class="video-embed">
+                            <iframe 
+                                src="https://www.youtube.com/embed/WGCgP2yNTss" 
+                                title="Finding Rad Episode"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-details">
+                            <h3>The Comeback Story</h3>
+                            <p>Building in public. No filters. Just the truth.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="video-card">
+                        <div class="video-embed">
+                            <iframe 
+                                src="https://www.youtube.com/embed/VIDEO_ID_2" 
+                                title="Finding Rad Episode"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-details">
+                            <h3>Episode Title Here</h3>
+                            <p>Episode description goes here.</p>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-embed">
+                            <iframe 
+                                src="https://www.youtube.com/embed/VIDEO_ID_3" 
+                                title="Finding Rad Episode"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-details">
+                            <h3>Another Episode</h3>
+                            <p>More great content coming your way.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-next" aria-label="Next video">›</button>
+            </div>
+            <div class="carousel-dots"></div>
         </div>
     </section>
 
@@ -587,6 +816,46 @@
                     });
                 }
             });
+        });
+
+        // Video Carousel
+        const videoContainer = document.querySelector('.video-container');
+        const videoCards = document.querySelectorAll('.video-card');
+        const prevBtn = document.querySelector('.carousel-prev');
+        const nextBtn = document.querySelector('.carousel-next');
+        const dotsContainer = document.querySelector('.carousel-dots');
+        
+        let currentIndex = 0;
+        
+        // Create dots
+        videoCards.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.className = 'carousel-dot';
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+        
+        const dots = document.querySelectorAll('.carousel-dot');
+        
+        function goToSlide(index) {
+            videoCards.forEach((card, i) => {
+                card.classList.toggle('active', i === index);
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            currentIndex = index;
+        }
+        
+        prevBtn.addEventListener('click', () => {
+            const newIndex = (currentIndex - 1 + videoCards.length) % videoCards.length;
+            goToSlide(newIndex);
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            const newIndex = (currentIndex + 1) % videoCards.length;
+            goToSlide(newIndex);
         });
     </script>
 </body>
