@@ -50,6 +50,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 2rem;
             z-index: 1000;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -77,6 +78,53 @@
             font-weight: 700;
             color: var(--charcoal);
             text-decoration: none;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            font-weight: 600;
+        }
+
+        .nav-menu a {
+            color: var(--charcoal);
+            text-decoration: none;
+            position: relative;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu .nav-blog-link {
+            color: var(--pink);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 2px;
+            background: var(--charcoal);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--pink);
+        }
+
+        .nav-menu a:hover::after,
+        .nav-menu a:focus-visible::after {
+            transform: scaleX(1);
         }
 
         .nav-cta {
@@ -495,6 +543,16 @@
             opacity: 0.7;
         }
 
+        @media (max-width: 768px) {
+            .episode-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .blog-article {
+                padding: 2.5rem 1.8rem;
+            }
+        }
+
         /* CTA Section */
         .cta-section {
             text-align: center;
@@ -567,6 +625,21 @@
                 padding: 6rem 5% 3rem;
             }
 
+            nav {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .nav-menu {
+                width: 100%;
+                justify-content: center;
+                order: 3;
+            }
+
+            .nav-cta {
+                order: 2;
+            }
+
             .about-content {
                 grid-template-columns: 1fr;
             }
@@ -608,6 +681,11 @@
         }
 
         @media (max-width: 480px) {
+            .nav-menu {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
             .carousel-btn {
                 width: 40px;
                 height: 40px;
@@ -619,12 +697,17 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <a href="#"><img src="images/logo.png" alt="Finding Rad" class="logo"></a>
+        <a href="#top" class="logo-link"><img src="images/logo.png" alt="Finding Rad" class="logo"></a>
+        <div class="nav-menu">
+            <a href="#about">About</a>
+            <a href="blog.html" class="nav-blog-link">Blog</a>
+            <a href="#latest">Episodes</a>
+        </div>
         <a href="#join" class="nav-cta">Join the Expedition</a>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="top">
         <div class="hero-content">
             <h1>Ideas are easy.<br>Building is the adventure.</h1>
             <p class="hero-subtitle">I'm Mark — a dad, designer, and certified chaos wrangler turning napkin sketches into real things. No fluff. No "crush it" culture. Just the good, hard, funny stuff that happens in between and maybe, if we're lucky, we'll find a little radness along the way.</p>
@@ -641,7 +724,7 @@
     </section>
 
     <!-- About Section -->
-    <section class="section-grey">
+    <section class="section-grey" id="about">
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
@@ -687,7 +770,7 @@
     </section>
 
     <!-- Video Carousel Section -->
-    <section class="video-carousel section-grey">
+    <section class="video-carousel section-grey" id="latest">
         <div class="container">
             <div class="section-header">
                 <h2>Latest Episodes</h2>

@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "the-comeback-story",
+    "title": "The Comeback Story",
+    "season": 1,
+    "episode": 1,
+    "readTime": "12 minute read",
+    "summary": "How pressing pause reset priorities, made space for family, and reignited the work worth doing.",
+    "youtubeUrl": "https://www.youtube.com/watch?v=WGCgP2yNTss",
+    "podcastUrl": "https://open.spotify.com/show/placeholder",
+    "publishedOn": "2024-01-15",
+    "content": [
+      "Sometimes the bravest thing you can do is stop. After sprinting in every direction, I hit pause to reset priorities, reconnect with family, and remember why I started building in the first place.",
+      "This episode kicks off the new Finding Rad era—one where intention beats hustle. I unpack what changed, what stayed, and how I'm designing a life that leaves room for curiosity, adventure, and the people who matter most.",
+      "If you're rebuilding, rebooting, or just rethinking your path, this one's for you."
+    ]
+  },
+  {
+    "slug": "designing-the-adventure-flask",
+    "title": "Designing the Adventure Flask",
+    "season": 1,
+    "episode": 2,
+    "readTime": "15 minute read",
+    "summary": "From scribbles to prototypes—an inside look at turning feedback into field-ready gear.",
+    "youtubeUrl": "https://www.youtube.com/watch?v=VIDEO_ID_2",
+    "podcastUrl": "https://podcasts.apple.com/us/podcast/placeholder",
+    "publishedOn": "2024-01-22",
+    "content": [
+      "Great gear starts with solving a real problem. In this episode I share the research behind the Adventure Flask—talking to customers, testing assumptions, and gathering the constraints that shaped the final form.",
+      "You'll see early sketches, the tools I use to iterate quickly, and how I decide which features make the cut. It's messy, hands-on, and exactly why I love building physical products.",
+      "I also walk through the feedback loops we use at Hibear to make sure the gear works as hard in the field as it does in your imagination."
+    ]
+  },
+  {
+    "slug": "shipping-without-the-burnout",
+    "title": "Shipping Without the Burnout",
+    "season": 1,
+    "episode": 3,
+    "readTime": "10 minute read",
+    "summary": "Systems and guardrails that keep the projects shipping while energy stays high.",
+    "youtubeUrl": "https://www.youtube.com/watch?v=VIDEO_ID_3",
+    "podcastUrl": "https://feeds.buzzsprout.com/placeholder",
+    "publishedOn": "2024-01-29",
+    "content": [
+      "Momentum beats perfection. This episode is the playbook I use to keep projects moving forward while keeping energy tanks full.",
+      "I cover weekly planning rituals, the tools that make collaboration easier, and the guardrails I use to protect creativity (and my calendar).",
+      "If you're trying to ship consistently without burning out, you'll find a few experiments worth stealing."
+    ]
+  }
+]

@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding Rad · Episode Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --charcoal: #0f172a;
+            --yellow: #ffe66d;
+            --pink: #ff6b6b;
+            --white: #ffffff;
+            --grey: #f3f4f6;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--charcoal);
+            background: var(--white);
+        }
+
+        a {
+            color: inherit;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.75rem 5%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+        }
+
+        .logo {
+            height: 48px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--charcoal);
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 2px;
+            background: var(--pink);
+            opacity: 0;
+            transform: translateY(4px);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .nav-menu a:hover::after,
+        .nav-menu a:focus-visible::after,
+        .nav-menu a.active::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .nav-cta {
+            background: var(--charcoal);
+            color: var(--yellow);
+            text-decoration: none;
+            padding: 0.85rem 1.8rem;
+            border-radius: 999px;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .nav-cta:hover,
+        .nav-cta:focus-visible {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 30px rgba(15, 23, 42, 0.15);
+        }
+
+        header.hero {
+            padding: 8rem 5% 4rem;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.98) 0%, rgba(15, 23, 42, 0.75) 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header.hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at top left, rgba(255, 230, 109, 0.35), transparent 55%),
+                radial-gradient(circle at bottom right, rgba(255, 107, 107, 0.25), transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            gap: 2rem;
+        }
+
+        .hero-inner h1 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(3rem, 5vw, 4.5rem);
+            margin: 0;
+        }
+
+        .hero-inner p {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            max-width: 680px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 3rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.5rem, 4vw, 3.2rem);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: #4b5563;
+            margin: 0;
+            font-size: 1.05rem;
+        }
+
+        .episode-grid {
+            display: grid;
+            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+
+        .episode-card {
+            background: var(--grey);
+            border-radius: 24px;
+            padding: 2.4rem 2rem;
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            outline: none;
+        }
+
+        .episode-card:hover,
+        .episode-card:focus-visible,
+        .episode-card.is-active {
+            transform: translateY(-6px);
+            box-shadow: 0 30px 60px rgba(15, 23, 42, 0.1);
+        }
+
+        .episode-card h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.6rem;
+            margin: 0;
+        }
+
+        .episode-meta {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #6b7280;
+            margin: 0;
+        }
+
+        .episode-summary {
+            margin: 0;
+            color: #374151;
+            line-height: 1.6;
+        }
+
+        .episode-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .episode-link {
+            padding: 0.6rem 1.4rem;
+            border-radius: 999px;
+            text-decoration: none;
+            border: 2px solid var(--charcoal);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .episode-link:hover,
+        .episode-link:focus-visible {
+            background: var(--charcoal);
+            color: var(--yellow);
+        }
+
+        .episode-blog-link {
+            text-decoration: none;
+            font-weight: 600;
+            color: var(--pink);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .episode-blog-link::after {
+            content: '→';
+            transition: transform 0.3s ease;
+        }
+
+        .episode-blog-link:hover::after,
+        .episode-blog-link:focus-visible::after {
+            transform: translateX(4px);
+        }
+
+        .blog-detail {
+            background: var(--grey);
+            border-radius: 32px 32px 0 0;
+            margin-top: 3rem;
+            padding: 5rem 0 6rem;
+        }
+
+        .blog-article {
+            background: var(--white);
+            border-radius: 28px;
+            padding: 3rem 3.5rem;
+            box-shadow: 0 30px 80px rgba(15, 23, 42, 0.08);
+        }
+
+        .blog-header {
+            display: grid;
+            gap: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .blog-header h2 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(2.3rem, 4vw, 3.2rem);
+            margin: 0;
+        }
+
+        .blog-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem 1.5rem;
+            font-size: 0.95rem;
+            color: #6b7280;
+        }
+
+        .blog-body {
+            display: grid;
+            gap: 1.4rem;
+            color: #1f2937;
+            line-height: 1.75;
+        }
+
+        .blog-actions {
+            margin-top: 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .empty-state {
+            text-align: center;
+            color: #6b7280;
+        }
+
+        footer {
+            padding: 3rem 5%;
+            background: #0f172a;
+            color: rgba(255, 255, 255, 0.75);
+            text-align: center;
+        }
+
+        footer a {
+            color: inherit;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover,
+        footer a:focus-visible {
+            color: var(--yellow);
+        }
+
+        @media (max-width: 900px) {
+            .blog-article {
+                padding: 2.4rem 2.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .nav-menu {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .nav-cta {
+                order: 2;
+            }
+
+            header.hero {
+                padding: 6rem 5% 3rem;
+            }
+
+            section {
+                padding: 4rem 0;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .episode-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .episode-links {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .blog-article {
+                padding: 2rem 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html#top" class="logo-link"><img src="images/logo.png" alt="Finding Rad" class="logo"></a>
+        <div class="nav-menu">
+            <a href="index.html#about">About</a>
+            <a href="blog.html" class="nav-blog-link active">Blog</a>
+            <a href="index.html#latest">Episodes</a>
+        </div>
+        <a href="index.html#join" class="nav-cta">Join the Expedition</a>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-inner">
+            <h1>The Episode Guide</h1>
+            <p>Every podcast, video, and long-form breakdown collected in one hub. Browse the full library and jump straight into the story that fits your journey.</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="episode-library">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Browse the Library</h2>
+                    <p>Select an episode to open the companion blog, or head straight to the watch and listen links.</p>
+                </div>
+                <div id="episode-grid" class="episode-grid" role="list"></div>
+            </div>
+        </section>
+
+        <section class="blog-detail" id="blog-detail">
+            <div class="container">
+                <article class="blog-article" aria-live="polite">
+                    <header class="blog-header">
+                        <h2 id="detail-title">Select an episode to read the full story</h2>
+                        <div id="detail-meta" class="blog-meta" aria-live="polite"></div>
+                    </header>
+                    <div id="detail-body" class="blog-body empty-state">
+                        <p>Choose an episode from the list above to load the companion blog content here.</p>
+                    </div>
+                    <div id="detail-links" class="blog-actions" hidden></div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Finding Rad. Built with purpose. Engineered with care.</p>
+        <p><a href="mailto:mark@hibear.co">Need to update the feed? Email Mark</a></p>
+    </footer>
+
+    <script>
+        const episodeGrid = document.getElementById('episode-grid');
+        const detailTitle = document.getElementById('detail-title');
+        const detailMeta = document.getElementById('detail-meta');
+        const detailBody = document.getElementById('detail-body');
+        const detailLinks = document.getElementById('detail-links');
+        let posts = [];
+
+        /**
+         * Load the blog data and render the listing/detail views.
+         * To add, remove, or edit episodes update data/blogs.json.
+         */
+        fetch('data/blogs.json')
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Unable to load blog data.');
+                }
+                return response.json();
+            })
+            .then((data) => {
+                posts = Array.isArray(data) ? data : [];
+                renderEpisodeGrid(posts);
+                const params = new URLSearchParams(window.location.search);
+                const initialSlug = params.get('slug');
+                if (initialSlug) {
+                    showPost(initialSlug, { scroll: false, updateHistory: false });
+                }
+            })
+            .catch((error) => {
+                console.error(error);
+                renderErrorState();
+            });
+
+        function renderEpisodeGrid(items) {
+            episodeGrid.innerHTML = '';
+            if (!items.length) {
+                const empty = document.createElement('p');
+                empty.className = 'empty-state';
+                empty.textContent = 'No episodes found. Add entries to data/blogs.json to populate the library.';
+                episodeGrid.appendChild(empty);
+                return;
+            }
+
+            items.forEach((post) => {
+                const card = document.createElement('article');
+                card.className = 'episode-card';
+                card.setAttribute('role', 'listitem');
+                card.setAttribute('tabindex', '0');
+                card.dataset.slug = post.slug;
+
+                const title = document.createElement('h3');
+                title.textContent = post.title;
+
+                const meta = document.createElement('p');
+                meta.className = 'episode-meta';
+                const seasonLabel = post.season ? `Season ${post.season}` : 'Episode';
+                const episodeLabel = post.episode ? `Episode ${post.episode}` : '';
+                meta.textContent = [seasonLabel, episodeLabel].filter(Boolean).join(' · ');
+
+                const summary = document.createElement('p');
+                summary.className = 'episode-summary';
+                summary.textContent = post.summary || 'Tap through to read the full breakdown for this episode.';
+
+                const linkGroup = document.createElement('div');
+                linkGroup.className = 'episode-links';
+
+                if (post.youtubeUrl) {
+                    const watchLink = document.createElement('a');
+                    watchLink.className = 'episode-link';
+                    watchLink.href = post.youtubeUrl;
+                    watchLink.target = '_blank';
+                    watchLink.rel = 'noopener';
+                    watchLink.textContent = 'Watch on YouTube';
+                    linkGroup.appendChild(watchLink);
+                }
+
+                if (post.podcastUrl) {
+                    const listenLink = document.createElement('a');
+                    listenLink.className = 'episode-link';
+                    listenLink.href = post.podcastUrl;
+                    listenLink.target = '_blank';
+                    listenLink.rel = 'noopener';
+                    listenLink.textContent = 'Listen to the podcast';
+                    linkGroup.appendChild(listenLink);
+                }
+
+                const blogLink = document.createElement('a');
+                blogLink.className = 'episode-blog-link';
+                blogLink.href = `?slug=${encodeURIComponent(post.slug)}`;
+                blogLink.textContent = 'Read the blog';
+                blogLink.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    showPost(post.slug);
+                });
+
+                card.appendChild(title);
+                card.appendChild(meta);
+                card.appendChild(summary);
+                card.appendChild(linkGroup);
+                card.appendChild(blogLink);
+
+                card.addEventListener('click', (event) => {
+                    const linkClicked = event.target.closest('a');
+                    if (linkClicked && linkClicked !== blogLink) {
+                        return;
+                    }
+                    showPost(post.slug);
+                });
+
+                card.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        showPost(post.slug);
+                    }
+                });
+
+                episodeGrid.appendChild(card);
+            });
+        }
+
+        function showPost(slug, options = {}) {
+            const { scroll = true, updateHistory = true } = options;
+            const post = posts.find((item) => item.slug === slug);
+            if (!post) {
+                resetDetail();
+                return;
+            }
+
+            document.querySelectorAll('.episode-card').forEach((card) => {
+                card.classList.toggle('is-active', card.dataset.slug === slug);
+            });
+
+            detailTitle.textContent = post.title;
+
+            const metaItems = [];
+            if (post.season) {
+                metaItems.push(`Season ${post.season}`);
+            }
+            if (post.episode) {
+                metaItems.push(`Episode ${post.episode}`);
+            }
+            if (post.readTime) {
+                metaItems.push(post.readTime);
+            }
+            if (post.publishedOn) {
+                metaItems.push(new Date(post.publishedOn).toLocaleDateString(undefined, {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                }));
+            }
+
+            detailMeta.innerHTML = '';
+            if (metaItems.length) {
+                metaItems.forEach((item) => {
+                    const span = document.createElement('span');
+                    span.textContent = item;
+                    detailMeta.appendChild(span);
+                });
+            }
+
+            detailBody.classList.remove('empty-state');
+            detailBody.innerHTML = '';
+            const paragraphs = Array.isArray(post.content) && post.content.length
+                ? post.content
+                : ['Full notes for this episode are coming soon.'];
+            paragraphs.forEach((paragraph) => {
+                const p = document.createElement('p');
+                p.textContent = paragraph;
+                detailBody.appendChild(p);
+            });
+
+            detailLinks.innerHTML = '';
+            const linkNodes = [];
+            if (post.youtubeUrl) {
+                const watchLink = document.createElement('a');
+                watchLink.className = 'episode-link';
+                watchLink.href = post.youtubeUrl;
+                watchLink.target = '_blank';
+                watchLink.rel = 'noopener';
+                watchLink.textContent = 'Watch the episode';
+                linkNodes.push(watchLink);
+            }
+
+            if (post.podcastUrl) {
+                const listenLink = document.createElement('a');
+                listenLink.className = 'episode-link';
+                listenLink.href = post.podcastUrl;
+                listenLink.target = '_blank';
+                listenLink.rel = 'noopener';
+                listenLink.textContent = 'Listen to the podcast';
+                linkNodes.push(listenLink);
+            }
+
+            if (linkNodes.length) {
+                detailLinks.hidden = false;
+                linkNodes.forEach((node) => detailLinks.appendChild(node));
+            } else {
+                detailLinks.hidden = true;
+            }
+
+            if (updateHistory) {
+                const url = new URL(window.location);
+                url.searchParams.set('slug', slug);
+                window.history.pushState({ slug }, '', url);
+            }
+
+            if (scroll) {
+                document.getElementById('blog-detail').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        function resetDetail() {
+            document.querySelectorAll('.episode-card').forEach((card) => card.classList.remove('is-active'));
+            detailTitle.textContent = 'Select an episode to read the full story';
+            detailMeta.innerHTML = '';
+            detailBody.classList.add('empty-state');
+            detailBody.innerHTML = '<p>Choose an episode from the list above to load the companion blog content here.</p>';
+            detailLinks.innerHTML = '';
+            detailLinks.hidden = true;
+        }
+
+        function renderErrorState() {
+            episodeGrid.innerHTML = '';
+            const error = document.createElement('p');
+            error.className = 'empty-state';
+            error.textContent = 'We had trouble loading the episode list. Check that data/blogs.json exists and is valid JSON.';
+            episodeGrid.appendChild(error);
+            resetDetail();
+        }
+
+        window.addEventListener('popstate', (event) => {
+            const slug = event.state?.slug || new URLSearchParams(window.location.search).get('slug');
+            if (slug) {
+                showPost(slug, { scroll: false, updateHistory: false });
+            } else {
+                resetDetail();
+            }
+        });
+    </script>
+</body>
+</html>
