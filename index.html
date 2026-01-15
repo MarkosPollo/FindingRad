@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finding Rad | Build Your Dream</title>
     <meta name="description" content="Join Mark on the journey of building products, businesses, and a life of freedom. Real builders, real process, real stories.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#E2E42D">
     
-    <!-- Fonts -->
+    <!-- Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="dns-prefetch" href="https://subscribe-forms.beehiiv.com">
+
+    <!-- Fonts with font-display swap for faster rendering -->
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
@@ -51,9 +58,9 @@
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.98);
+            transition: padding 0.3s ease, box-shadow 0.3s ease;
+            will-change: padding, box-shadow;
         }
 
         nav.scrolled {
@@ -115,16 +122,17 @@
             text-align: center;
             opacity: 0;
             animation: fadeInUp 1s ease forwards;
+            will-change: opacity, transform;
         }
 
         @keyframes fadeInUp {
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translate3d(0, 0, 0);
             }
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translate3d(0, 30px, 0);
             }
         }
 
@@ -157,14 +165,15 @@
             font-weight: 600;
             font-size: 1.1rem;
             border: 2px solid var(--yellow);
-            transition: all 0.3s ease;
+            transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
             display: inline-block;
+            will-change: transform;
         }
 
         .btn-primary:hover {
             background: var(--charcoal);
             color: var(--yellow);
-            transform: translateY(-3px);
+            transform: translate3d(0, -3px, 0);
             box-shadow: 0 10px 30px rgba(226, 228, 45, 0.4);
         }
 
@@ -177,24 +186,26 @@
             font-weight: 600;
             font-size: 1.1rem;
             border: 2px solid var(--charcoal);
-            transition: all 0.3s ease;
+            transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, padding 0.3s ease;
             display: inline-block;
             position: relative;
             overflow: hidden;
+            will-change: transform;
         }
 
         .btn-secondary::before {
             content: '▶';
             position: absolute;
             left: -30px;
-            transition: all 0.3s ease;
+            transition: left 0.3s ease, opacity 0.3s ease;
             opacity: 0;
+            will-change: left, opacity;
         }
 
         .btn-secondary:hover {
             background: var(--charcoal);
             color: var(--white);
-            transform: translateY(-3px);
+            transform: translate3d(0, -3px, 0);
             padding-left: 3.5rem;
         }
 
@@ -235,7 +246,9 @@
             padding: 6rem 5%;
             opacity: 0;
             transform: translateY(50px);
-            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            content-visibility: auto;
+            contain-intrinsic-size: auto 500px;
         }
 
         section.visible {
@@ -315,12 +328,13 @@
             background: var(--white);
             padding: 3rem 2rem;
             border-radius: 20px;
-            transition: all 0.4s ease;
+            transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
             border: 2px solid transparent;
+            will-change: transform;
         }
 
         .pillar-card:hover {
-            transform: translateY(-10px);
+            transform: translate3d(0, -10px, 0);
             border-color: var(--yellow);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
@@ -330,6 +344,7 @@
             margin-bottom: 1.5rem;
             display: inline-block;
             animation: float 3s ease-in-out infinite;
+            will-change: transform;
         }
 
         .pillar-card:nth-child(2) .pillar-icon {
@@ -341,8 +356,8 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            0%, 100% { transform: translate3d(0, 0, 0); }
+            50% { transform: translate3d(0, -10px, 0); }
         }
 
         .pillar-card h3 {
@@ -447,25 +462,26 @@
             border-radius: 50%;
             font-size: 2rem;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
             flex-shrink: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             font-weight: 300;
+            will-change: transform;
         }
 
         .carousel-btn:hover {
             background: var(--pink);
             border-color: var(--pink);
             color: var(--white);
-            transform: scale(1.05);
+            transform: scale3d(1.05, 1.05, 1);
             box-shadow: 0 6px 20px rgba(232,62,140,0.3);
         }
 
         .carousel-btn:active {
-            transform: scale(0.95);
+            transform: scale3d(0.95, 0.95, 1);
         }
 
         .carousel-dots {
@@ -619,7 +635,7 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <a href="#"><img src="images/logo.png" alt="Finding Rad" class="logo"></a>
+        <a href="#"><img src="images/logo.png" alt="Finding Rad" class="logo" fetchpriority="high"></a>
         <a href="#join" class="nav-cta">Join the Expedition</a>
     </nav>
 
@@ -653,7 +669,7 @@
                     <p><strong>The mission?</strong> Engineer excitement. Build your own adventure. Maybe even find a little radness along the way. ⚡</p>
                  </div>
                 <div class="about-image">
-                    <img src="images/mark-photo.jpg" alt="Mark">
+                    <img src="images/mark-photo.jpg" alt="Mark" loading="lazy" width="600" height="600">
                 </div>
             </div>
         </div>
@@ -698,12 +714,13 @@
                 <div class="video-container">
                     <div class="video-card active">
                         <div class="video-embed">
-                            <iframe 
-                                src="https://www.youtube.com/embed/WGCgP2yNTss" 
+                            <iframe
+                                data-src="https://www.youtube.com/embed/WGCgP2yNTss"
                                 title="Finding Rad Episode"
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                                loading="lazy">
                             </iframe>
                         </div>
                         <div class="video-details">
@@ -711,15 +728,16 @@
                             <p>Building in public. No filters. Just the truth.</p>
                         </div>
                     </div>
-                    
+
                     <div class="video-card">
                         <div class="video-embed">
-                            <iframe 
-                                src="https://www.youtube.com/embed/VIDEO_ID_2" 
+                            <iframe
+                                data-src="https://www.youtube.com/embed/VIDEO_ID_2"
                                 title="Finding Rad Episode"
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                                loading="lazy">
                             </iframe>
                         </div>
                         <div class="video-details">
@@ -730,12 +748,13 @@
 
                     <div class="video-card">
                         <div class="video-embed">
-                            <iframe 
-                                src="https://www.youtube.com/embed/VIDEO_ID_3" 
+                            <iframe
+                                data-src="https://www.youtube.com/embed/VIDEO_ID_3"
                                 title="Finding Rad Episode"
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                                loading="lazy">
                             </iframe>
                         </div>
                         <div class="video-details">
@@ -756,9 +775,9 @@
             <h2>Join the Expedition</h2>
             <p>New episodes weekly. Real stories. Real builders. Zero BS.</p>
             <div class="email-form">
-                <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-                <iframe src="https://subscribe-forms.beehiiv.com/bb8379d5-911d-46df-a944-3ebea84a1cff" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width: 100%; max-width: 560px; height: 303px; margin: 0 auto; border-radius: 20px !important; background-color: transparent; box-shadow: none; display: block;"></iframe>
+                <iframe data-src="https://subscribe-forms.beehiiv.com/bb8379d5-911d-46df-a944-3ebea84a1cff" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" loading="lazy" style="width: 100%; max-width: 560px; height: 303px; margin: 0 auto; border-radius: 20px !important; background-color: transparent; box-shadow: none; display: block;"></iframe>
             </div>
+            <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
             <p class="social-proof">Join hundreds of builders on the journey</p>
         </div>
     </section>
@@ -776,6 +795,28 @@
     </footer>
 
     <script>
+        // Lazy load iframes
+        function loadIframe(iframe) {
+            if (iframe.dataset.src && !iframe.src) {
+                iframe.src = iframe.dataset.src;
+            }
+        }
+
+        // Intersection Observer for lazy loading iframes
+        const iframeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    loadIframe(entry.target);
+                    iframeObserver.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: '50px' });
+
+        // Observe all iframes with data-src
+        document.querySelectorAll('iframe[data-src]').forEach(iframe => {
+            iframeObserver.observe(iframe);
+        });
+
         // Scroll animations
         const observerOptions = {
             threshold: 0.1,
@@ -796,11 +837,18 @@
 
         // Nav scroll effect
         const nav = document.querySelector('nav');
+        let ticking = false;
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    if (window.scrollY > 100) {
+                        nav.classList.add('scrolled');
+                    } else {
+                        nav.classList.remove('scrolled');
+                    }
+                    ticking = false;
+                });
+                ticking = true;
             }
         });
 
@@ -824,9 +872,9 @@
         const prevBtn = document.querySelector('.carousel-prev');
         const nextBtn = document.querySelector('.carousel-next');
         const dotsContainer = document.querySelector('.carousel-dots');
-        
+
         let currentIndex = 0;
-        
+
         // Create dots
         videoCards.forEach((_, index) => {
             const dot = document.createElement('button');
@@ -835,27 +883,40 @@
             dot.addEventListener('click', () => goToSlide(index));
             dotsContainer.appendChild(dot);
         });
-        
+
         const dots = document.querySelectorAll('.carousel-dot');
-        
+
         function goToSlide(index) {
             videoCards.forEach((card, i) => {
                 card.classList.toggle('active', i === index);
+                // Load iframe when card becomes active
+                if (i === index) {
+                    const iframe = card.querySelector('iframe[data-src]');
+                    if (iframe) loadIframe(iframe);
+                }
             });
             dots.forEach((dot, i) => {
                 dot.classList.toggle('active', i === index);
             });
             currentIndex = index;
         }
-        
+
         prevBtn.addEventListener('click', () => {
             const newIndex = (currentIndex - 1 + videoCards.length) % videoCards.length;
             goToSlide(newIndex);
         });
-        
+
         nextBtn.addEventListener('click', () => {
             const newIndex = (currentIndex + 1) % videoCards.length;
             goToSlide(newIndex);
+        });
+
+        // Load first video after page load
+        window.addEventListener('load', () => {
+            const firstIframe = document.querySelector('.video-card.active iframe[data-src]');
+            if (firstIframe) {
+                setTimeout(() => loadIframe(firstIframe), 1000); // Delay to prioritize critical content
+            }
         });
     </script>
 </body>
