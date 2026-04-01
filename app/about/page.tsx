@@ -40,12 +40,10 @@ export default function AboutPage() {
               </p>
 
               <p>
-                Finding Rad exists because I got tired of watching founders
-                perform confidence they don&apos;t feel. The cleaned-up version
-                of entrepreneurship doesn&apos;t help anyone. The real version
-                — the cash flow spreadsheets, the supplier problems, the
-                moments where you almost quit — that&apos;s what actually
-                teaches something.
+                Finding Rad exists because I believe the messy middle is where
+                the real lessons live. The cash flow spreadsheets, the supplier
+                problems, the moments where you almost quit. That&apos;s what
+                actually teaches something. So I put a camera on it.
               </p>
 
               <p>
