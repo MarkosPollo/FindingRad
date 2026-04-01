@@ -15,19 +15,11 @@ guest:
   bio: "Pastor, father of four, founder of Octave Coffee. Each roast is a genre of music."
 ---
 
-Tate Kennedy doesn't just make coffee. He builds bridges. From the mountainous fields of Nicaragua to rock faces in the Czech Republic to a roastery in North Andover, Massachusetts, Tate has spent his life connecting people through adventure, faith, and really good coffee. He's also a lead pastor, a father of four, and the kind of person who brews an Aeropress on top of a cliff after nearly falling off it.
-
-> "There's something about food and coffee or tea or just gathering around some kind of thing that breaks down those barriers between humans."
-
-— Tate Kennedy
+Tate Kennedy doesn't just make coffee. He builds bridges. From the mountainous fields of Nicaragua to rock faces in the Czech Republic to a roastery in North Andover, Massachusetts, Tate has spent his life connecting people through adventure, faith, and really good coffee. He's also a lead pastor, a father of four, and the kind of person who brews an Aeropress on top of a cliff after nearly falling off it. His thesis: there's something about food and coffee — any gathering around a shared thing — that breaks down barriers between humans. Everything else follows from that.
 
 ## From Nicaraguan Fields to New England Cups
 
-Tate's coffee journey started before he had any idea it would become a business. Growing up, his family traveled to Nicaragua for missions work. His father served as a pastor there, and young Tate spent time walking through coffee fields, surrounded by the farms that would later shape everything he built.
-
-> "Being around the coffee fields and the farms, that sense of adventure of getting outside and going, plus coffee, really played a big role in why we're doing what we're doing now."
-
-— Tate Kennedy
+Tate's coffee journey started before he had any idea it would become a business. Growing up, his family traveled to Nicaragua for missions work. His father served as a pastor there, and young Tate spent time walking through coffee fields, surrounded by the farms that would later shape everything he built. The adventure of getting outside, the smell of the fields, the community built around a harvest — it stuck with him in ways he couldn't fully articulate until he was ready to build something of his own.
 
 Years later, after two years traveling across 30 states and nearly seven years living in the Czech Republic, Tate and his family returned to the Boston area with a dream: a roastery that didn't just sell coffee but rebuilt the kind of connection he'd experienced in Nicaragua.
 
@@ -35,11 +27,7 @@ Years later, after two years traveling across 30 states and nearly seven years l
 
 ## Eight Notes, Eight Roasts
 
-Three years ago, Tate and his business partner launched Octave Coffee — a music-themed roastery where each of their eight roasts represents a different genre. Dark roast blues. A vibrant Latin blend. Smooth jazz espresso. The name comes from the musical octave: eight notes, eight coffees, harmony in variety.
-
-> "An octave has eight different levels, so we have eight different coffees."
-
-— Tate Kennedy
+Three years ago, Tate and his business partner launched Octave Coffee — a music-themed roastery where each of their eight roasts represents a different genre. Dark roast blues. A vibrant Latin blend. Smooth jazz espresso. Eight notes, eight coffees, harmony in variety — the name earns itself.
 
 What started with two small roasters handling just two pounds each at a time recently upgraded to a commercial-size machine. They're scaling production while keeping their commitment to quality and direct sourcing from farmers they've known for decades.
 
@@ -53,19 +41,11 @@ For Tate, the roastery was never about the coffee business. It was about recreat
 
 — Tate Kennedy
 
-Octave's long-term dream is a brick-and-mortar shop — not as a revenue center, but as a gathering place. A spot where people show up because the coffee is excellent and they stay because they feel like they belong.
-
-> "We want to be the kind of people that if we were gone tomorrow, the community would miss us. We care about them."
-
-— Tate Kennedy
+Octave's long-term dream is a brick-and-mortar shop — not as a revenue center, but as a gathering place. A spot where people show up because the coffee is excellent and they stay because they feel like they belong. Tate's benchmark is simple: if they were gone tomorrow, the community would miss them. That's the whole business model.
 
 ## Climbing High, Brewing Higher
 
-While living in the Czech Republic, Tate picked up rock climbing with a friend who happened to be a professional climber. What started as an effort to lose weight turned into something much deeper.
-
-> "He's pushing me way outside of my comfort zone. I'm hanging off the side of this rock face and I think I'm about to die. But he helps me get up to the top, and we sit up there and we brew a cup of coffee."
-
-— Tate Kennedy
+While living in the Czech Republic, Tate picked up rock climbing with a friend who happened to be a professional climber. What started as an effort to lose weight turned into something much deeper. He was hanging off a rock face, convinced he was about to die, when his friend coaxed him to the top — and brewed him a cup of coffee on the summit.
 
 Those mountaintop conversations — fueled by Aeropress coffee and adrenaline — became some of the most meaningful moments of Tate's time abroad. The summit is where walls come down. Discomfort is the price of entry, and coffee is the reward.
 

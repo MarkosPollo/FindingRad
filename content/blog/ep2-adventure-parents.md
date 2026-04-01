@@ -31,11 +31,7 @@ When the wheels come off — a tantrum, a breakdown, a day where nothing goes ri
 
 ⚡ **Try this:** Next time tension is building in your house, put on a song everyone loves and dance for 90 seconds. Not metaphorically. Actually dance. It breaks the loop faster than any conversation.
 
-They were friends for 10 years before they got together. The dancing was always part of who they were — it didn't come from a book. It came from knowing each other deeply enough to be silly without self-consciousness. That matters more than most people realize.
-
-> "Joy isn't something you find when things calm down. It's the thing that calms things down."
-
-— Devon
+They were friends for 10 years before they got together. The dancing was always part of who they were — it didn't come from a book. It came from knowing each other deeply enough to be silly without self-consciousness. Joy isn't something you find when things calm down. It's the thing that calms things down. That matters more than most people realize.
 
 ## Shared Survival Builds Different
 
@@ -43,11 +39,7 @@ Five years on a bus isn't a vacation. It's a masterclass in what happens when yo
 
 🔥 **Shared survival builds something deeper than shared experiences.** Fixing a blown alternator at 8,000 feet together forges a bond that a weekend getaway never will. The hard moments aren't the enemy of a strong family — they're the raw material.
 
-Their daughters treat the entire country like their backyard, because it is. The 10-year-old can troubleshoot a water pump. The 3-year-old thinks mountains are normal. These kids aren't growing up sheltered from discomfort — they're growing up inside it, and they're thriving.
-
-> "We built a life around motion and found that everything we needed came with us."
-
-— Nikki
+Their daughters treat the entire country like their backyard, because it is. The 10-year-old can troubleshoot a water pump. The 3-year-old thinks mountains are normal. These kids aren't growing up sheltered from discomfort — they're growing up inside it, and they're thriving. As Nikki put it: they built a life around motion and found that everything they needed came with them.
 
 ## Becoming a Kid Is the Strategy
 

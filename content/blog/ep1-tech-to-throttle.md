@@ -15,11 +15,7 @@ guest:
   bio: "160k followers, mental health advocate, author of The Moto Journal."
 ---
 
-Carl Allen Muny had the life everyone tells you to build. Twenty years in tech and marketing, self-employed since 19, sold an agency in 2013. Then COVID pulled the pin on all of it — the work, the relationship, the identity he'd stacked on top of achievements that suddenly didn't exist. What he found on the other side wasn't a motivational poster. It was a motorcycle, a tent, and thousands of acres of empty Canadian wilderness.
-
-> "It almost feels like you're stealing freedom back."
-
-— Carl Allen Muny
+Carl Allen Muny had the life everyone tells you to build. Twenty years in tech and marketing, self-employed since 19, sold an agency in 2013. Then COVID pulled the pin on all of it — the work, the relationship, the identity he'd stacked on top of achievements that suddenly didn't exist. What he found on the other side wasn't a motivational poster. It was a motorcycle, a tent, and thousands of acres of empty Canadian wilderness. He describes it the only way that makes sense: it almost feels like you're stealing freedom back.
 
 ## The Red Car Theory
 
@@ -35,11 +31,7 @@ Your brain is a search engine. Whatever query you feed it, that's what it return
 
 ## Alone in the Backcountry
 
-Carl packed a tent, a camp stove, and zero plans. He rode into Crown Land and spent 24-hour stretches completely alone with his thoughts. No cell service. No agenda. Just a guy on a bike figuring out who he was without the job title and the relationship status.
-
-> "Stripping away the trappings doesn't leave you with nothing. It leaves you with yourself."
-
-— Carl Allen Muny
+Carl packed a tent, a camp stove, and zero plans. He rode into Crown Land and spent 24-hour stretches completely alone with his thoughts. No cell service. No agenda. Just a guy on a bike figuring out who he was without the job title and the relationship status. Stripping away the trappings doesn't leave you with nothing — it leaves you with yourself.
 
 The solo trips weren't romantic. Bears are real. Rain at 3 AM on a motorcycle trip is miserable. But the discomfort was the point — every mile was a conversation with himself he'd been avoiding for years.
 
@@ -49,11 +41,7 @@ The solo trips weren't romantic. Bears are real. Rain at 3 AM on a motorcycle tr
 
 Here's the part Carl didn't see coming. He bought the motorcycle to get away from people. Tech conferences, networking events, the attention economy — he was done. The bike was supposed to be his exit from all of it.
 
-Instead, it became his entrance. He started sharing the solo rides and the mental health research on Instagram. People didn't show up for bike specs or gear reviews. They showed up for the honesty.
-
-> "The conversations stopped being about bikes and started being about the journey. The struggles. What it means to actually live."
-
-— Carl Allen Muny
+Instead, it became his entrance. He started sharing the solo rides and the mental health research on Instagram. People didn't show up for bike specs or gear reviews. They showed up for the honesty. The conversations stopped being about bikes and started being about the journey — the struggles, what it means to actually live.
 
 His account — @ZenMotorcycleMaintenance — grew to 160,000 followers. He's now writing a book called *The Moto Journal*, documenting the intersection of riding and mental health. What started as a guy running from his problems on a Honda became a movement of people who discovered that forward motion — physical, literal forward motion — is one of the best antidepressants available.
 
