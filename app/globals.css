@@ -35,4 +35,45 @@
     @apply bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100;
     aspect-ratio: 9/16;
   }
+
+  .blog-prose {
+    @apply text-[1.08rem] leading-8 text-gray-700;
+  }
+
+  .blog-prose h2 {
+    @apply font-fraunces text-3xl sm:text-4xl text-charcoal mt-14 mb-5 leading-tight;
+  }
+
+  .blog-prose h3 {
+    @apply font-fraunces text-2xl text-charcoal mt-10 mb-4;
+  }
+
+  .blog-prose p {
+    @apply mb-6;
+  }
+
+  .blog-prose strong {
+    @apply text-charcoal font-semibold;
+  }
+
+  .blog-prose a {
+    @apply text-charcoal underline underline-offset-4 hover:text-yellow transition-colors;
+  }
+
+  .blog-prose blockquote {
+    @apply my-10 border-l-4 border-yellow pl-6 italic text-charcoal text-xl leading-9 bg-yellow/10 py-4 pr-4 rounded-r-2xl;
+  }
+
+  .blog-prose ul,
+  .blog-prose ol {
+    @apply my-6 pl-6 space-y-3;
+  }
+
+  .blog-prose li {
+    @apply pl-1;
+  }
+
+  .blog-prose hr {
+    @apply my-10 border-gray-200;
+  }
 }
