@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Finding Rad | Build in Public",
   description:
-    "Mark documents the real, messy process of turning ideas into adventures. Founder, Navy officer, builder. No polish. No pretense. Just the build.",
+    "Mark documents the real, messy process of turning ideas into adventures. Founder, builder, dad. No polish. No pretense. Just the build.",
   openGraph: {
     title: "Finding Rad | Build in Public",
     description:

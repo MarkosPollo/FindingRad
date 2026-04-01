@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About Mark | Finding Rad",
   description:
-    "Mark is the founder of Hibear, a Navy Reserve Lieutenant Commander, and a builder who documents the real process.",
+    "Mark is the founder of Hibear, a builder, and a dad to two boys. He documents the real process of turning ideas into adventures.",
 };
 
 export default function AboutPage() {
@@ -33,9 +33,7 @@ export default function AboutPage() {
               </p>
 
               <p>
-                I&apos;m also a Lieutenant Commander in the Navy Reserve. Four-plus
-                hours a week minimum, one full weekend a month, annual training,
-                and deployments. Real commitment. Wouldn&apos;t trade it.
+                Navy vet. Still serves. It shapes how I think about building — mission first, no excuses, get it done.
               </p>
 
               <p>
@@ -88,8 +86,8 @@ export default function AboutPage() {
                 <p className="text-xs text-gray-500 mt-1">Design awards</p>
               </div>
               <div className="bg-gray-50 rounded-xl p-4">
-                <p className="font-fraunces text-2xl font-bold text-charcoal">LCDR</p>
-                <p className="text-xs text-gray-500 mt-1">Navy Reserve</p>
+                <p className="font-fraunces text-2xl font-bold text-charcoal">USN</p>
+                <p className="text-xs text-gray-500 mt-1">Navy vet</p>
               </div>
               <div className="bg-yellow/20 rounded-xl p-4">
                 <p className="font-fraunces text-2xl font-bold text-charcoal">100%</p>

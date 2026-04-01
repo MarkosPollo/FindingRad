@@ -25,8 +25,7 @@ export default async function HomePage() {
                 <span className="text-yellow">Find Your Rad.</span>
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed max-w-lg">
-                I&apos;m Mark — founder, Navy Reserve LCDR, and dad to two boys
-                who run wild. I document the real, messy process of turning
+                I&apos;m Mark — founder, builder, and dad to two boys who run wild. I document the real, messy process of turning
                 ideas into adventures. No polish. No pretense. Just the build.
               </p>
               <div className="flex flex-wrap gap-4">

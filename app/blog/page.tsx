@@ -38,68 +38,80 @@ export default function BlogPage() {
           <p className="text-gray-500">No posts yet. Check back soon.</p>
         ) : (
           <div className="space-y-10">
+            {/* Featured post */}
             {featured && (
               <Link
                 href={`/blog/${featured.slug}`}
-                className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 bg-white border border-gray-200 rounded-[32px] p-6 sm:p-8 hover:shadow-[0_12px_40px_rgba(0,0,0,0.06)] transition-all"
+                className="group grid lg:grid-cols-2 gap-0 bg-white border border-gray-200 rounded-[32px] overflow-hidden hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] transition-all"
               >
-                <div className="order-2 lg:order-1 flex flex-col justify-between">
-                  <div>
-                    <div className="flex flex-wrap gap-3 mb-5 text-sm text-gray-500">
-                      <span className="px-3 py-1 rounded-full bg-gray-50 border border-gray-200">
-                        Featured post
-                      </span>
-                      <span>{formatDate(featured.date)}</span>
-                    </div>
-                    <h2 className="font-fraunces text-3xl sm:text-4xl font-bold text-charcoal leading-tight mb-4">
-                      {featured.title}
-                    </h2>
-                    <p className="text-gray-600 text-lg leading-relaxed max-w-2xl">
-                      {featured.excerpt}
-                    </p>
-                  </div>
-                  <p className="mt-8 text-sm font-semibold text-charcoal">Read the story &rarr;</p>
-                </div>
-
-                <div className="order-1 lg:order-2 rounded-[24px] overflow-hidden border border-gray-200 bg-yellow/20">
+                {/* Thumbnail — left on desktop */}
+                <div className="relative order-1 lg:order-none overflow-hidden" style={{ minHeight: "300px" }}>
                   {featured.thumbnail ? (
                     <img
                       src={featured.thumbnail}
                       alt={featured.title}
-                      className="w-full h-full object-cover aspect-[4/3]"
+                      className="absolute inset-0 w-full h-full object-cover"
                     />
                   ) : (
-                    <div className="aspect-[4/3]" />
+                    <div className="absolute inset-0 bg-[#FFD23F]/20" />
                   )}
+                </div>
+
+                {/* Text — right on desktop */}
+                <div className="flex flex-col justify-between p-8 sm:p-10 order-2 lg:order-none">
+                  <div>
+                    <div className="flex flex-wrap gap-2 mb-5 text-sm">
+                      <span className="px-3 py-1 rounded-full bg-[#FFD23F] text-charcoal font-semibold text-xs uppercase tracking-wider">
+                        Featured
+                      </span>
+                      <span className="text-gray-400">{formatDate(featured.date)}</span>
+                    </div>
+                    <h2 className="font-fraunces text-[2.5rem] font-bold text-charcoal leading-tight mb-4">
+                      {featured.title}
+                    </h2>
+                    <p className="text-gray-600 text-lg leading-relaxed">
+                      {featured.excerpt}
+                    </p>
+                  </div>
+                  <p className="mt-8 text-sm font-semibold text-charcoal group-hover:text-[#FFD23F] transition-colors">
+                    Read the story &rarr;
+                  </p>
                 </div>
               </Link>
             )}
 
+            {/* Rest of posts — 2-column grid */}
             {rest.length > 0 && (
               <div className="grid md:grid-cols-2 gap-6">
                 {rest.map((post) => (
                   <Link
                     key={post.slug}
                     href={`/blog/${post.slug}`}
-                    className="block bg-white p-6 border border-gray-200 rounded-[28px] hover:border-yellow hover:shadow-sm transition-all"
+                    className="group block bg-white border border-gray-200 rounded-[28px] overflow-hidden hover:border-[#FFD23F] hover:shadow-sm transition-all"
                   >
-                    {post.thumbnail && (
-                      <div className="rounded-[18px] overflow-hidden border border-gray-100 mb-5">
+                    {/* Thumbnail — 16:10 */}
+                    <div className="overflow-hidden" style={{ aspectRatio: "16/10" }}>
+                      {post.thumbnail ? (
                         <img
                           src={post.thumbnail}
                           alt={post.title}
-                          className="w-full object-cover aspect-[16/10]"
+                          className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
                         />
-                      </div>
-                    )}
-                    <p className="text-sm text-gray-400 mb-2">{formatDate(post.date)}</p>
-                    <h2 className="font-fraunces text-2xl font-semibold text-charcoal mb-3 leading-snug">
-                      {post.title}
-                    </h2>
-                    <p className="text-gray-600 leading-relaxed">{post.excerpt}</p>
-                    <p className="text-sm font-semibold text-charcoal mt-5 hover:text-yellow transition-colors">
-                      Read &rarr;
-                    </p>
+                      ) : (
+                        <div className="w-full h-full bg-[#FFD23F]/20" />
+                      )}
+                    </div>
+
+                    <div className="p-6">
+                      <p className="text-sm text-gray-400 mb-2">{formatDate(post.date)}</p>
+                      <h2 className="font-fraunces text-2xl font-semibold text-charcoal mb-3 leading-snug">
+                        {post.title}
+                      </h2>
+                      <p className="text-gray-600 leading-relaxed text-[0.95rem]">{post.excerpt}</p>
+                      <p className="text-sm font-semibold text-charcoal mt-5 group-hover:text-[#FFD23F] transition-colors">
+                        Read &rarr;
+                      </p>
+                    </div>
                   </Link>
                 ))}
               </div>
