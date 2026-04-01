@@ -15,40 +15,50 @@ guest:
   bio: "160k followers, mental health advocate, author of The Moto Journal."
 ---
 
-Most people hit rock bottom and look for a way out. Carl Allen Muny hit it hard during COVID, lost stable work, a relationship, and most of the infrastructure he'd built his identity around. He didn't find a dramatic epiphany. He found a motorcycle.
+Carl Allen Muny had the life everyone tells you to build. Twenty years in tech and marketing, self-employed since 19, sold an agency in 2013. Then COVID pulled the pin on all of it — the work, the relationship, the identity he'd stacked on top of achievements that suddenly didn't exist. What he found on the other side wasn't a motivational poster. It was a motorcycle, a tent, and thousands of acres of empty Canadian wilderness.
 
-Carl runs @ZenMotorcycleMaintenance on Instagram — 160,000 followers who come for the mental health content and stay because he actually knows what he's talking about. He spent 20 years in tech and marketing, self-employed since 19, sold an agency in 2013. By all conventional measures, he had it figured out. Then he didn't.
+> "It almost feels like you're stealing freedom back."
+
+— Carl Allen Muny
 
 ## The Red Car Theory
 
-Carl dropped something early in our conversation that stuck with me.
+Carl dropped something in our conversation that I haven't been able to shake. He called it the red car theory — and once you hear it, you can't unhear it.
 
-> "If I asked you today how many red cars you saw on the way to work, you couldn't say. But if I told you I'd give you $50 for every red car you spot — you'd see them everywhere."
+> "If I said I'd give you $50 for every red car you see today, you'd start seeing them everywhere. They were always there. You just weren't looking."
 
-Opportunity works the same way. So does negativity. Whatever you're scanning for, you find.
+— Carl Allen Muny
 
-When Carl's life fell apart, he made a choice — consciously or not — to scan for the good stuff. That led him back to a motorcycle he'd been using as a commuter vehicle for years. He started riding for real. Then camping solo in Ontario's Crown Land — public wilderness so vast you can go days without seeing another person.
+Your brain is a search engine. Whatever query you feed it, that's what it returns. Scan for problems, you'll find problems. Scan for openings, you'll find openings. When Carl's life collapsed, he made a conscious choice to change the query. That shift led him back to a motorcycle he'd owned for years — except this time, he wasn't commuting. He was escaping into Ontario's Crown Land, public wilderness so vast you can ride for days without seeing another soul.
 
-**What he discovered out there:**
+⚡ **Try this today:** Pick one thing you want more of — opportunity, connection, beauty, whatever. Spend 24 hours actively scanning for it. You'll be stunned how much was already there.
 
-- Bears are real. Plan accordingly.
-- 24 hours alone with your thoughts is painful and therapeutic at the same time.
-- Stripping away the trappings doesn't leave you with nothing. It leaves you with yourself.
+## Alone in the Backcountry
 
-## The Motorcycle as Mental Health Tool
+Carl packed a tent, a camp stove, and zero plans. He rode into Crown Land and spent 24-hour stretches completely alone with his thoughts. No cell service. No agenda. Just a guy on a bike figuring out who he was without the job title and the relationship status.
 
-Here's what most people don't know: riding a motorcycle is **measurably good for your brain.**
+> "Stripping away the trappings doesn't leave you with nothing. It leaves you with yourself."
 
-- Increases neuroplasticity
-- Boosts dopamine
-- Reduces cortisol
+— Carl Allen Muny
 
-Carl started researching it because he wanted to understand why he felt so much better. The data backed up what he was experiencing in his body. He shared it on Instagram. People responded because it validated something they already felt but couldn't articulate.
+The solo trips weren't romantic. Bears are real. Rain at 3 AM on a motorcycle trip is miserable. But the discomfort was the point — every mile was a conversation with himself he'd been avoiding for years.
 
-The irony in all of this? He bought the motorcycle to get away from people. To escape tech conferences and noise and the attention economy. Instead, the motorcycle led him straight to his people. The conversations stopped being about bikes and started being about the journey. The struggles. What it means to actually live.
+🔥 **Motorcycles are measurably good for your brain.** Riding increases neuroplasticity, boosts dopamine, and reduces cortisol. Carl started digging into the research because he wanted to understand why he felt so much better on two wheels. The neuroscience backed up what his body already knew.
+
+## The Escape That Built a Community
+
+Here's the part Carl didn't see coming. He bought the motorcycle to get away from people. Tech conferences, networking events, the attention economy — he was done. The bike was supposed to be his exit from all of it.
+
+Instead, it became his entrance. He started sharing the solo rides and the mental health research on Instagram. People didn't show up for bike specs or gear reviews. They showed up for the honesty.
+
+> "The conversations stopped being about bikes and started being about the journey. The struggles. What it means to actually live."
+
+— Carl Allen Muny
+
+His account — @ZenMotorcycleMaintenance — grew to 160,000 followers. He's now writing a book called *The Moto Journal*, documenting the intersection of riding and mental health. What started as a guy running from his problems on a Honda became a movement of people who discovered that forward motion — physical, literal forward motion — is one of the best antidepressants available.
+
+📌 **You don't need a motorcycle.** You need something that forces presence — where your brain can't multitask, where the world gets simple. For Carl it was two wheels on Crown Land. For me, it's a cargo ebike with my 4 and 5 year olds on the back. Different vehicle, same principle: start moving.
 
 ---
 
-I'm currently riding a cargo ebike with my 4 and 5 year olds on the back. Not quite the same. But the principle holds: find the thing that puts you in motion. The rest follows.
-
-That's what Finding Rad is built on. You don't need to have it figured out. You just need to start moving.
+That's what Finding Rad is about. You don't need to have it figured out. You just need to start moving.

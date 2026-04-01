@@ -62,7 +62,25 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   const { data, content } = matter(raw);
 
   const processedContent = await remark().use(html).process(content);
-  const contentHtml = processedContent.toString();
+  let contentHtml = processedContent.toString();
+
+  // Post-process: 🔥 prefix → value bomb box (charcoal bg, white text)
+  contentHtml = contentHtml.replace(
+    /<p>🔥\s*(.*?)<\/p>/g,
+    '<div class="blog-value-bomb"><p>$1</p></div>'
+  );
+
+  // Post-process: ⚡ prefix → hot tip box (yellow bg, charcoal text)
+  contentHtml = contentHtml.replace(
+    /<p>⚡\s*(.*?)<\/p>/g,
+    '<div class="blog-hot-tip"><p>$1</p></div>'
+  );
+
+  // Post-process: 📌 prefix → field notes box (cream bg, yellow border)
+  contentHtml = contentHtml.replace(
+    /<p>📌\s*(.*?)<\/p>/g,
+    '<div class="blog-field-notes"><p class="blog-field-notes-title">Field Notes</p><p>$1</p></div>'
+  );
 
   return {
     slug,

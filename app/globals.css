@@ -74,14 +74,15 @@
 
 .blog-prose blockquote {
   border-left: 5px solid #FFD23F;
-  padding: 1.25rem 1.75rem;
-  margin: 2.5rem 0;
+  padding: 1.5rem 2rem;
+  margin: 3rem 0;
   font-style: italic;
-  font-size: 1.2rem;
-  line-height: 1.75;
+  font-size: 1.35rem;
+  line-height: 1.8;
   color: #1a1a1a;
   background: #fffbea;
-  border-radius: 0 1rem 1rem 0;
+  border-radius: 0 16px 16px 0;
+  position: relative;
 }
 
 .blog-prose strong {
@@ -140,4 +141,86 @@
   border: none;
   border-top: 1px solid #e5e7eb;
   margin: 3rem 0;
+}
+
+/* Value bomb box — charcoal bg, white text, key insight */
+.blog-value-bomb {
+  background: #1a1a1a;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  margin: 2.5rem 0;
+  position: relative;
+}
+.blog-value-bomb::before {
+  content: '💡';
+  position: absolute;
+  top: -14px;
+  left: 1.5rem;
+  font-size: 1.5rem;
+  background: #1a1a1a;
+  padding: 0 6px;
+  border-radius: 4px;
+}
+.blog-value-bomb p {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+.blog-value-bomb strong {
+  color: #FFD23F;
+}
+
+/* Hot Tip box — bright yellow, actionable tip */
+.blog-hot-tip {
+  background: #FFD23F;
+  color: #1a1a1a;
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  margin: 2.5rem 0;
+  position: relative;
+}
+.blog-hot-tip::before {
+  content: '⚡';
+  position: absolute;
+  top: -14px;
+  left: 1.5rem;
+  font-size: 1.5rem;
+  background: #FFD23F;
+  padding: 0 6px;
+  border-radius: 4px;
+}
+.blog-hot-tip p {
+  color: #1a1a1a;
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+.blog-hot-tip strong {
+  color: #1a1a1a;
+}
+
+/* Field notes / quick takeaways box */
+.blog-field-notes {
+  background: #fffbea;
+  border: 2px solid #FFD23F;
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  margin: 2.5rem 0;
+}
+.blog-field-notes-title {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #666;
+  margin-bottom: 1rem;
+}
+.blog-field-notes ul {
+  margin: 0;
+}
+.blog-field-notes ul li::before {
+  background: #FFD23F;
 }
