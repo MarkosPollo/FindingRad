@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-inter text-charcoal bg-white;
+  }
+
+  h1, h2, h3 {
+    @apply font-fraunces;
+  }
+}
+
+@layer components {
+  .btn-yellow {
+    @apply bg-yellow text-charcoal font-semibold px-6 py-3 rounded-full hover:opacity-90 transition-opacity;
+  }
+
+  .btn-outline {
+    @apply border-2 border-charcoal text-charcoal font-semibold px-6 py-3 rounded-full hover:bg-charcoal hover:text-white transition-colors;
+  }
+
+  .video-card {
+    @apply bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100;
+  }
+
+  .shorts-card {
+    @apply bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100;
+    aspect-ratio: 9/16;
+  }
+}
