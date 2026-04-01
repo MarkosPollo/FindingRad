@@ -37,17 +37,33 @@
   }
 }
 
-/* ── Blog prose — outside @layer so nothing gets purged ─────────────────── */
+/* ── Blog prose ─────────────────────────────────────────────────────────────── */
 
 .blog-prose {
-  font-size: 18px;
-  line-height: 1.9;
+  font-size: 1.125rem;
+  line-height: 1.85;
   color: #2a2a2a;
+}
+
+.blog-prose > *:first-child {
+  margin-top: 0;
 }
 
 .blog-prose p {
   margin-top: 0;
   margin-bottom: 1.75rem;
+}
+
+/* Drop cap on first paragraph */
+.blog-prose > p:first-child::first-letter {
+  float: left;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 0.8;
+  padding-right: 0.5rem;
+  padding-top: 0.15rem;
+  color: #1a1a1a;
 }
 
 .blog-prose h2 {
@@ -72,17 +88,55 @@
   line-height: 1.3;
 }
 
+/* Pull quotes — the signature editorial element */
 .blog-prose blockquote {
-  border-left: 5px solid #FFD23F;
-  padding: 1.5rem 2rem;
-  margin: 3rem 0;
-  font-style: italic;
-  font-size: 1.35rem;
-  line-height: 1.8;
-  color: #1a1a1a;
-  background: #fffbea;
-  border-radius: 0 16px 16px 0;
+  border-left: none;
+  padding: 2rem 0;
+  margin: 2.5rem 0;
   position: relative;
+  text-align: center;
+}
+
+.blog-prose blockquote::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #FFD23F;
+  margin: 0 auto 1.5rem;
+}
+
+.blog-prose blockquote::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #FFD23F;
+  margin: 1.5rem auto 0;
+}
+
+.blog-prose blockquote p {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #1a1a1a;
+  margin-bottom: 0;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Attribution line inside blockquote (the "— Name" line) */
+.blog-prose blockquote p:last-child:not(:first-child) {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #999;
+  margin-top: 1rem;
 }
 
 .blog-prose strong {
@@ -94,6 +148,8 @@
   color: #1a1a1a;
   text-decoration: underline;
   text-underline-offset: 3px;
+  text-decoration-color: #FFD23F;
+  text-decoration-thickness: 2px;
 }
 
 .blog-prose a:hover {
@@ -139,8 +195,11 @@
 
 .blog-prose hr {
   border: none;
-  border-top: 1px solid #e5e7eb;
-  margin: 3rem 0;
+  margin: 3.5rem auto;
+  width: 80px;
+  height: 3px;
+  background: #FFD23F;
+  border-radius: 2px;
 }
 
 /* Value bomb box — charcoal bg, white text, key insight */
@@ -148,10 +207,11 @@
   background: #1a1a1a;
   color: #ffffff;
   border-radius: 16px;
-  padding: 1.5rem 2rem;
+  padding: 1.75rem 2rem;
   margin: 2.5rem 0;
   position: relative;
 }
+
 .blog-value-bomb::before {
   content: '💡';
   position: absolute;
@@ -162,12 +222,14 @@
   padding: 0 6px;
   border-radius: 4px;
 }
+
 .blog-value-bomb p {
   color: #ffffff;
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.7;
 }
+
 .blog-value-bomb strong {
   color: #FFD23F;
 }
@@ -177,10 +239,11 @@
   background: #FFD23F;
   color: #1a1a1a;
   border-radius: 16px;
-  padding: 1.5rem 2rem;
+  padding: 1.75rem 2rem;
   margin: 2.5rem 0;
   position: relative;
 }
+
 .blog-hot-tip::before {
   content: '⚡';
   position: absolute;
@@ -191,14 +254,17 @@
   padding: 0 6px;
   border-radius: 4px;
 }
+
 .blog-hot-tip p {
   color: #1a1a1a;
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.7;
 }
+
 .blog-hot-tip strong {
   color: #1a1a1a;
+  font-weight: 800;
 }
 
 /* Field notes / quick takeaways box */
@@ -206,9 +272,10 @@
   background: #fffbea;
   border: 2px solid #FFD23F;
   border-radius: 16px;
-  padding: 1.5rem 2rem;
+  padding: 1.75rem 2rem;
   margin: 2.5rem 0;
 }
+
 .blog-field-notes-title {
   font-family: 'Fraunces', Georgia, serif;
   font-size: 0.8rem;
@@ -218,9 +285,40 @@
   color: #666;
   margin-bottom: 1rem;
 }
+
 .blog-field-notes ul {
   margin: 0;
 }
+
 .blog-field-notes ul li::before {
   background: #FFD23F;
+}
+
+/* ── Responsive refinements ─────────────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .blog-prose {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+  }
+
+  .blog-prose h2 {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .blog-prose blockquote p {
+    font-size: 1.2rem;
+  }
+
+  .blog-prose > p:first-child::first-letter {
+    font-size: 3rem;
+  }
+
+  .blog-value-bomb,
+  .blog-hot-tip,
+  .blog-field-notes {
+    padding: 1.25rem 1.5rem;
+    margin: 2rem 0;
+  }
 }

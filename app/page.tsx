@@ -141,15 +141,29 @@ export default async function HomePage() {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="video-card p-6 block hover:border-yellow transition-colors"
+                  className="group block bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-yellow hover:shadow-md transition-all"
                 >
-                  <p className="text-sm text-gray-400 mb-2">{post.date}</p>
-                  <h3 className="font-fraunces text-xl font-semibold text-charcoal mb-2">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {post.excerpt}
-                  </p>
+                  {post.thumbnail && (
+                    <div className="overflow-hidden" style={{ aspectRatio: '16/10' }}>
+                      <img
+                        src={post.thumbnail}
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                      />
+                    </div>
+                  )}
+                  <div className="p-6">
+                    <p className="text-sm text-gray-400 mb-2">{post.date}</p>
+                    <h3 className="font-fraunces text-xl font-semibold text-charcoal mb-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {post.excerpt}
+                    </p>
+                    <p className="text-sm font-semibold text-charcoal mt-4 group-hover:text-yellow transition-colors">
+                      Read &rarr;
+                    </p>
+                  </div>
                 </Link>
               ))}
             </div>
