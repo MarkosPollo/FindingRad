@@ -1,0 +1,36 @@
+---
+title: "From Tech to Throttle: Finding Freedom on Two Wheels"
+date: "2025-10-01"
+videoId: "WGCgP2yNTss"
+slug: "ep1-tech-to-throttle"
+thumbnail: "https://i.ytimg.com/vi/WGCgP2yNTss/maxresdefault.jpg"
+excerpt: "Carl Allen Muny spent 20 years in tech. Then COVID hit, his life fell apart, and he found himself alone on a motorcycle with nothing but his thoughts. What happened next surprised him."
+---
+
+Most people hit rock bottom and look for a way out. Carl Allen Muny hit it hard during COVID, lost stable work, a relationship, and most of the infrastructure he'd built his identity around. He didn't find a dramatic epiphany. He found a motorcycle.
+
+Carl is the guy behind @ZenMotorcycleMaintenance on Instagram — 160,000 followers who come for the mental health content and stay because he actually knows what he's talking about. He spent 20 years in tech and marketing, self-employed since 19, sold an agency in 2013. By all conventional measures, he had it figured out. Then he didn't.
+
+This is EP1 of Finding Rad. And it set the tone for everything this channel is about.
+
+## The Red Car Theory
+
+Carl dropped something early in our conversation that stuck with me. The red car theory: if I ask you right now how many red cars you saw on the way to work, you can't say. But if I told you I'd give you $50 for every red car you spot, you'd see them everywhere.
+
+Opportunity works the same way. So does negativity. Whatever you're scanning for, you find.
+
+When Carl's life fell apart, he made a choice, consciously or not, to scan for the good stuff. That led him back to a motorcycle he'd been using as a commuter vehicle for years. He started riding for real. Then camping solo in Ontario's Crown Land, which is public wilderness so vast you can go days without seeing another person. Bears included.
+
+## The Motorcycle as Mental Health Tool
+
+Here's the thing Carl discovered that most people don't know: riding a motorcycle is measurably good for your brain. It increases neuroplasticity. Boosts dopamine. Reduces cortisol. He started researching it because he wanted to understand why he felt so much better, and the data backed up what he was experiencing.
+
+He started sharing it on Instagram. People responded because it validated something they already felt but couldn't articulate.
+
+The irony in all of this? He bought the motorcycle to get away from people. To escape tech conferences and noise and the attention economy. Instead, the motorcycle led him straight to his people. The conversations stopped being about bikes and started being about the journey. The struggles. What it means to actually live.
+
+That's the thing about shared passion. You skip the small talk.
+
+I'm currently riding a cargo ebike with my 4 and 5 year olds on the back. Not quite the same, but the principle holds. Find the thing that puts you in motion. The rest follows.
+
+That's what Finding Rad is built on. You don't need to have it figured out. You just need to start moving.
