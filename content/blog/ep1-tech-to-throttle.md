@@ -5,6 +5,14 @@ videoId: "WGCgP2yNTss"
 slug: "ep1-tech-to-throttle"
 thumbnail: "https://i.ytimg.com/vi/WGCgP2yNTss/maxresdefault.jpg"
 excerpt: "Carl Allen Muny spent 20 years in tech. Then COVID hit, his life fell apart, and he found himself alone on a motorcycle with nothing but his thoughts. What happened next surprised him."
+takeaways:
+  - "When your life explodes, that's not a setback — it's an opening. Carl lost his job, his relationship, and his identity, and used it to rebuild better."
+  - "The red car theory: you find what you look for. Train your brain to scan for opportunity and you'll start seeing it everywhere."
+  - "A motorcycle (or any analog passion) is a legitimate mental health tool. It boosts dopamine, reduces cortisol, and gets you out of your head."
+guest:
+  name: "Carl Allen Muny"
+  handle: "@ZenMotorcycleMaintenance"
+  bio: "160k followers, mental health advocate, author of The Moto Journal."
 ---
 
 Most people hit rock bottom and look for a way out. Carl Allen Muny hit it hard during COVID, lost stable work, a relationship, and most of the infrastructure he'd built his identity around. He didn't find a dramatic epiphany. He found a motorcycle.

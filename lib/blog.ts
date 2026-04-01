@@ -14,6 +14,8 @@ export interface BlogPost {
   videoId?: string;
   thumbnail?: string;
   content?: string;
+  takeaways?: string[];
+  guest?: { name: string; handle: string; bio: string };
 }
 
 export function getAllPosts(): BlogPost[] {
@@ -34,6 +36,8 @@ export function getAllPosts(): BlogPost[] {
       excerpt: data.excerpt || "",
       videoId: data.videoId,
       thumbnail: data.thumbnail,
+      takeaways: data.takeaways,
+      guest: data.guest,
     } as BlogPost;
   });
 
@@ -68,5 +72,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     videoId: data.videoId,
     thumbnail: data.thumbnail,
     content: contentHtml,
+    takeaways: data.takeaways,
+    guest: data.guest,
   };
 }

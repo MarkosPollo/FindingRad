@@ -37,40 +37,59 @@
   }
 
   .blog-prose {
-    @apply text-[1.08rem] leading-8 text-gray-700;
+    font-size: 18px;
+    line-height: 1.85;
+    color: #2a2a2a;
+  }
+
+  .blog-prose p {
+    margin-bottom: 1.6rem;
   }
 
   .blog-prose h2 {
-    @apply font-fraunces text-3xl sm:text-4xl text-charcoal mt-14 mb-5 leading-tight;
+    font-family: Fraunces, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #FFD23F;
   }
 
   .blog-prose h3 {
     @apply font-fraunces text-2xl text-charcoal mt-10 mb-4;
   }
 
-  .blog-prose p {
-    @apply mb-6;
+  .blog-prose blockquote {
+    border-left: 4px solid #FFD23F;
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: #1a1a1a;
+    background: #fffbea;
+    border-radius: 0 1rem 1rem 0;
   }
 
   .blog-prose strong {
-    @apply text-charcoal font-semibold;
+    color: #1a1a1a;
+    font-weight: 600;
   }
 
   .blog-prose a {
     @apply text-charcoal underline underline-offset-4 hover:text-yellow transition-colors;
   }
 
-  .blog-prose blockquote {
-    @apply my-10 border-l-4 border-yellow pl-6 italic text-charcoal text-xl leading-9 bg-yellow/10 py-4 pr-4 rounded-r-2xl;
-  }
-
   .blog-prose ul,
   .blog-prose ol {
-    @apply my-6 pl-6 space-y-3;
+    margin: 1.5rem 0;
+    padding-left: 1.75rem;
   }
 
   .blog-prose li {
-    @apply pl-1;
+    margin-bottom: 0.5rem;
   }
 
   .blog-prose hr {

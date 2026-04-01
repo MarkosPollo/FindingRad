@@ -47,7 +47,7 @@ export default function AboutPage() {
                 Finding Rad exists because I believe the messy middle is where
                 the real lessons live. The cash flow spreadsheets, the supplier
                 problems, the moments where you almost quit. That&apos;s what
-                actually teaches something. So I put a camera on it.
+                actually teaches something. This channel is that process, documented.
               </p>
 
               <p>
