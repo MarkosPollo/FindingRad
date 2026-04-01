@@ -1,28 +1,28 @@
 {
   "longForm": [
     {
-      "videoId": "WGCgP2yNTss",
+      "id": "WGCgP2yNTss",
       "title": "From Tech to Throttle: Finding Freedom on Two Wheels | Finding Rad EP1",
       "thumbnail": "https://i.ytimg.com/vi/WGCgP2yNTss/maxresdefault.jpg",
-      "publishedAt": "2025-10-01T00:00:00Z",
-      "duration": "Long Form",
-      "url": "https://www.youtube.com/watch?v=WGCgP2yNTss"
+      "publishedAt": "Oct 1, 2025",
+      "duration": "1:02:34",
+      "isShort": false
     },
     {
-      "videoId": "hRaieY6Z-VM",
+      "id": "hRaieY6Z-VM",
       "title": "How Adventure Made Us Better Parents | Finding Rad EP2",
       "thumbnail": "https://i.ytimg.com/vi/hRaieY6Z-VM/maxresdefault.jpg",
-      "publishedAt": "2025-10-15T00:00:00Z",
-      "duration": "Long Form",
-      "url": "https://www.youtube.com/watch?v=hRaieY6Z-VM"
+      "publishedAt": "Oct 15, 2025",
+      "duration": "58:12",
+      "isShort": false
     },
     {
-      "videoId": "L-rVFnernj0",
+      "id": "L-rVFnernj0",
       "title": "Nicaragua to New England: How Travel Sparked a Coffee Revolution | EP3 Tate Kennedy",
       "thumbnail": "https://i.ytimg.com/vi/L-rVFnernj0/maxresdefault.jpg",
-      "publishedAt": "2025-11-01T00:00:00Z",
-      "duration": "Long Form",
-      "url": "https://www.youtube.com/watch?v=L-rVFnernj0"
+      "publishedAt": "Nov 1, 2025",
+      "duration": "55:48",
+      "isShort": false
     }
   ],
   "shorts": [],
