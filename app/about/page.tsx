@@ -33,10 +33,14 @@ export default function AboutPage() {
               </p>
 
               <p>
-                I&apos;m also a Lieutenant Commander in the Navy Reserve. That
-                means four-plus hours a week minimum, one full weekend a month,
-                plus annual training and deployments. It&apos;s a real
-                commitment, and I wouldn&apos;t trade it.
+                I&apos;m also a Lieutenant Commander in the Navy Reserve. Four-plus
+                hours a week minimum, one full weekend a month, annual training,
+                and deployments. Real commitment. Wouldn&apos;t trade it.
+              </p>
+
+              <p>
+                And I&apos;m a dad to two young boys who act like raccoons. They
+                keep everything in perspective.
               </p>
 
               <p>
